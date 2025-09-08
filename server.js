@@ -51,6 +51,11 @@ app.get('/collectibles/:index', (req, res) => {
     res.send(`So, you want the ${collectibles[index].name}? for ${collectibles[index].price}, it can be yours!`)
 } )
 
+// tested URL
+//1:- localhost:3000/collectibles/0
+//2:- localhost:3000/collectibles/1
+//3:- localhost:3000/collectibles/sue
+//==========================================================================================
 
 //4. Filter Shoes by Query Parameters
 app.get('/shoes', (req, res) => {
@@ -78,6 +83,13 @@ app.get('/shoes', (req, res) => {
     res.json(foundShoes)
 })
 
+// tested URL
+//1 localhost:3000/shoes
+//2 localhost:3000/shoes?type=boot
+//3 localhost:3000/shoes?min-price=100
+//4 localhost:3000/shoes?max-price=100
+//5 localhost:3000/shoes?min-price=100&type=boot
+//=====================================================================================
 
 
 const port = 3000;
